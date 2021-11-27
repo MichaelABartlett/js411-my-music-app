@@ -3,6 +3,8 @@ import {useState} from 'react';
 import Card from './components/Card'
 import Loggedin from './components/LoggedIn'
 import "./App.css";
+import Switch from '@mui/material/Switch';
+
 
 function App() {
 
@@ -22,10 +24,21 @@ function App() {
               setState={setIsOnline} 
               component={Switch}
                />
-        
-        <Card title="Master Volume" body="Overrides all other sound settings in this application" state={isVolume} setState={setIsVolume} />
 
-        <Card title="Sound Quality" body="Manually control the music quality in event of poor connection" state={isSoundQuality} setState={setIsSoundQuality} />
+        <Card title= "Online Mode" 
+              body= "Is this application connected to the internet?"  
+              state={isVolume} 
+              setState={setIsVolume} 
+              component={Switch}
+              />
+
+        <Card title= "Online Mode" 
+              body= "Is this application connected to the internet?"  
+              state={isSoundQuality} 
+              setState={setIsSoundQuality} 
+              component={Switch}
+              />
+        
       </div>
         <div className="Notifications">
           <h1>System Notifications:</h1>

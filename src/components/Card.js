@@ -7,7 +7,7 @@ import Switch from '@mui/material/Switch';
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
-export default function BasicCard({state, setState, title, body}) {
+export default function BasicCard({state, setState, title, body, component: Component}) {
 
     const handleChange = () => {
         setState(!state)
@@ -24,7 +24,7 @@ export default function BasicCard({state, setState, title, body}) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Switch {...label} checked={state} onChange={handleChange} />
+        <Component {...label} checked={state} onChange={handleChange} />
       </CardActions>
     </Card>
   );
