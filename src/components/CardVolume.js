@@ -21,12 +21,12 @@ export default function BasicCard({state, setState, title, body, component: Comp
     
     
   return (
-    <Card sx={{ maxWidth: 275 }}>
+    <Card sx={{ maxWidth: 250 }}  >
       <CardContent>
         <Typography variant="h5" component="div">
             {title}
         </Typography>
-        <Typography variant="body2">
+        <Typography variant="body2" >
             {body}
         </Typography>
       </CardContent>
