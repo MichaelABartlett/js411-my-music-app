@@ -1,20 +1,33 @@
 import {useState} from 'react';
-//import Button from './components/Button'
 import Card from './components/Card'
+import CardVolume from './components/CardVolume'
+import CardQuality from './components/CardQuality'
 import Loggedin from './components/LoggedIn'
 import "./App.css";
 import Switch from '@mui/material/Switch';
 
 
+
+
+
 function App() {
 
-  const [isOnline, setIsOnline] = useState(true)
+    const [isOnline, setIsOnline] = useState(true)
 
-  const [isVolume, setIsVolume] = useState(true)
+  const [isVolume, setIsVolume] = useState('')
 
-  const [isSoundQuality, setIsSoundQuality] = useState(true)
- 
-  return (
+  const [isSoundQuality, setIsSoundQuality] = useState()
+
+  const [isLoggedIn, setIsLoggedIn] = useState(true)
+
+  //const [age, setAge] = useState()
+
+  
+  return ( 
+    
+
+    isLoggedIn ? <Loggedin state={isLoggedIn} setState={setIsLoggedIn}  /> : (
+    
     <div className="App">
 
       <div className="Cards">
@@ -25,28 +38,30 @@ function App() {
               component={Switch}
                />
 
-        <Card title= "Online Mode" 
-              body= "Is this application connected to the internet?"  
+        <CardVolume title= "Master Volume" 
+              body= "Overrides all other sound setting in this application"  
               state={isVolume} 
               setState={setIsVolume} 
-              component={Switch}
               />
 
-        <Card title= "Online Mode" 
-              body= "Is this application connected to the internet?"  
+        <CardQuality title= "Sound Quality" 
+              body= "Manually control the music quality in event of poor connection"  
               state={isSoundQuality} 
               setState={setIsSoundQuality} 
-              component={Switch}
+              //age={setAge}
               />
         
       </div>
         <div className="Notifications">
           <h1>System Notifications:</h1>
             {!isOnline && <p>Your application is offline.  You won't be able to share or strems music to other devices.</p>}
-            {!isVolume && <p>Listening to music at a high volume could cause long-term hearing loss.</p>}
-            {!isSoundQuality && <p>Music quality is degraded.  Increase quality if your connection allows it.</p>}
+            {isVolume > 80 && <p>Listening to music at a high volume could cause long-term hearing loss.</p>}
+            {isSoundQuality === 1 && <p>Music quality is degraded.  Increase quality if your connection allows it.</p>}
         </div>
+          
     </div>
+       )
+      
   );
 }
 

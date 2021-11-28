@@ -1,21 +1,30 @@
 import {useState} from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import Switch from '@mui/material/Switch';
+import './Loggedin.css'
+
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
+
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
-export default function BasicCard({isLoggedIn, setIsLoggedIn}) {
+export default function BasicCard({state, setState}) {
 
     const handleChange = () => {
-        setIsLoggedIn(!isLoggedIn)
+        setState(!state)
     }
     
   return (
-    <div>
-        This is the login page
+    <div className="container">
+
+      <div className="loginBox">
+        <div><TextField id="standard-basic" label="Username" variant="standard" style={{width:300}} /></div>
+        <div><TextField id="standard-basic" label="Password" variant="standard" style={{width:300}} /></div>
+        <div><Button variant="contained" style={{width:300}} onClick={handleChange} >LOGIN</Button></div>
+      </div>
     </div>
   );
 }
+
+
+{/* <div><Button variant="contained" style={{width:195}}>LOGIN</Button></div> */}

@@ -1,0 +1,17 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.loginBox {
+    /* border: 2px solid black; */
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    
+}
