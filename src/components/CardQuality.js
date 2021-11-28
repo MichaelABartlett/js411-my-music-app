@@ -10,22 +10,12 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 
-const label = { inputProps: { 'aria-label': 'Switch demo' } };
-
-
-
-
 export default function BasicCard({state, setState, title, body}) {
 
-   
-
-   
-  
     const handleChange = (e, val) => {
       setState(state = val.props.value);
       console.log('value: ' , val.props.value)
     };
-    
     
     
   return (

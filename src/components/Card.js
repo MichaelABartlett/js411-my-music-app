@@ -28,27 +28,3 @@ export default function BasicCard({state, setState, title, body, component: Comp
   );
 }
 
-
-// this was working
-// export default function BasicCard({isOnline, setIsOnline}) {
-
-//     const handleChange = () => {
-//         setIsOnline(!isOnline)
-//     }
-    
-//   return (
-//     <Card sx={{ maxWidth: 275 }}>
-//       <CardContent>
-//         <Typography variant="h5" component="div">
-//           Online mode
-//         </Typography>
-//         <Typography variant="body2">
-//           Is this application connected to the internet?
-//         </Typography>
-//       </CardContent>
-//       <CardActions>
-//         <Switch {...label} checked={isOnline} onChange={handleChange} />
-//       </CardActions>
-//     </Card>
-//   );
-// }

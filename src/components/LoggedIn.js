@@ -1,10 +1,7 @@
-import {useState} from 'react';
 import './Loggedin.css'
 
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-
-
 
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
@@ -27,4 +24,3 @@ export default function BasicCard({state, setState}) {
 }
 
 
-{/* <div><Button variant="contained" style={{width:195}}>LOGIN</Button></div> */}

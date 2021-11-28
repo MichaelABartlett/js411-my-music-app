@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 
 import Slider from '@mui/material/Slider';
 
-
 export default function BasicCard({state, setState, title, body, component: Component}) {
 
     function valuetext(value) {
@@ -16,9 +15,6 @@ export default function BasicCard({state, setState, title, body, component: Comp
         console.log('value: ', val)
             setState(state = val)
     }
-
-    
-    
     
   return (
     <Card sx={{ maxWidth: 250 }}  >
