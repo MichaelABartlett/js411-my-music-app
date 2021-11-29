@@ -13,7 +13,7 @@ function App() {
 
   const [isVolume, setIsVolume] = useState('')
 
-  const [isSoundQuality, setIsSoundQuality] = useState()
+  const [isSoundQuality, setIsSoundQuality] = useState('')
 
   const [isLoggedIn, setIsLoggedIn] = useState(true)
   

@@ -34,9 +34,8 @@ export default function BasicCard({state, setState, title, body}) {
         <Select
           labelId="demo-simple-select-standard-label"
           id="demo-simple-select-standard"
-          defaultValue={state}
+          value={state}
           onChange={handleChange}
-          //label="Age"
         >
           <MenuItem value=''>
            
